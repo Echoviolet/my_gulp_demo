@@ -1,2 +1,4 @@
-.idea/
-node-modules/
+/.idea
+node_modules/
+/.sass-cache
+npm-debug.log
