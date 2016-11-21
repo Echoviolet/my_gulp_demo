@@ -1,0 +1,60 @@
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#title-container{
+  margin-top: -90px;
+  width: 100%;
+  background: #129FA6 url('../images/title-background.jpg') no-repeat fixed center top;
+  #title{
+    width: 1050px;
+    height: 650px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    #title-text {
+      font-family: "droid-sans-mono", "proxima-nova", arial, sans-serif;
+      font-size: 108.17px;
+      text-transform: uppercase;
+      padding-top: 250px;
+      .c {
+        display: inline-block;
+        width: 68px;
+      }
+      .s {
+        width: 30px;
+      }
+      .white {
+        color: #FFF;
+      }
+    }
+  }
+}
+.agents{
+  width: 100%;
+  margin-top: -21px;
+  .introduce{
+    background: url("../images/intro-graphic.png") no-repeat;
+    padding: 200px 0;
+    width: 1050px;
+    margin: 0 auto;
+    .right{
+      margin-left: 40%;
+      h2{
+        font-size: 64px;
+        color: #00B0B9;
+        font-weight: 600;
+        line-height: 68px;
+        margin-bottom: 29px;
+      }
+      .bold{
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
