@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0; }
 
+.main {
+  width: 1050px;
+  margin: 0 auto; }
+
 #title-container {
   margin-top: -90px;
   width: 100%;
@@ -21,7 +25,7 @@
       padding-top: 250px; }
       #title-container #title #title-text .c {
         display: inline-block;
-        width: 68px; }
+        width: 45px; }
       #title-container #title #title-text .s {
         width: 30px; }
       #title-container #title #title-text .white {
@@ -47,5 +51,124 @@
         font-size: 30px;
         line-height: 36px;
         margin-bottom: 15px; }
+
+#focus-container {
+  background: #ebebeb url("../images/focus-background.jpg") no-repeat fixed center top;
+  z-index: 2;
+  overflow: hidden;
+  background-position: 510px top; }
+  #focus-container #focus {
+    background: url("../images/focus-gray-background.png") no-repeat 33px top;
+    width: 1050px;
+    height: 699px;
+    margin: 0 auto;
+    padding: 0; }
+    #focus-container #focus #focus-text {
+      width: 550px;
+      padding: 200px 0 0 50px;
+      z-index: 10; }
+      #focus-container #focus #focus-text h2 {
+        font-size: 64px;
+        color: #00B0B9;
+        font-weight: 600;
+        line-height: 68px;
+        margin-bottom: 29px; }
+      #focus-container #focus #focus-text p {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 0; }
+      #focus-container #focus #focus-text #focus-bold {
+        width: 360px; }
+      #focus-container #focus #focus-text .bold {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 15px; }
+      #focus-container #focus #focus-text #focus-body {
+        width: 360px; }
+    #focus-container #focus .block {
+      float: left;
+      display: inline; }
+
+#story-container .story {
+  background: url("../images/story-graphic.png") no-repeat 545px -20px;
+  width: 1050px;
+  height: 527px;
+  margin: 0 auto;
+  padding: 0; }
+  #story-container .story #story-text {
+    width: 425px;
+    padding-top: 190px; }
+  #story-container .story .block {
+    float: left;
+    display: inline; }
+    #story-container .story .block p {
+      font-size: 18px;
+      line-height: 26px;
+      margin-top: 0; }
+    #story-container .story .block .bold {
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 15px; }
+  #story-container .story #story-heading {
+    width: 507px;
+    padding-top: 130px;
+    padding-left: 118px; }
+    #story-container .story #story-heading h2 {
+      font-size: 64px;
+      color: #00B0B9;
+      font-weight: 600;
+      line-height: 68px;
+      margin-bottom: 29px; }
+
+#offer-container {
+  background-color: #EBEBEB; }
+  #offer-container #offer {
+    background: #EBEBEB url("../images/offer-background.png") no-repeat 43px top;
+    width: 1050px;
+    height: 668px;
+    margin: 0 auto;
+    padding: 0; }
+    #offer-container #offer #offer-text {
+      width: 550px;
+      padding-top: 180px; }
+      #offer-container #offer #offer-text h2 {
+        font-size: 64px;
+        color: #00B0B9;
+        font-weight: 600;
+        line-height: 68px;
+        margin-bottom: 29px; }
+      #offer-container #offer #offer-text .bold {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 15px; }
+      #offer-container #offer #offer-text #offer-body {
+        width: 430px; }
+    #offer-container #offer .block {
+      float: left;
+      display: inline; }
+
+#footer-container {
+  background-color: #000; }
+  #footer-container #footer {
+    width: 1050px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0; }
+    #footer-container #footer #footer-text {
+      width: 520px;
+      font-size: 18px;
+      color: #FFF;
+      padding-top: 25px;
+      display: inline-block;
+      vertical-align: middle; }
+    #footer-container #footer #footer-logo {
+      width: 525px;
+      text-align: right;
+      padding-top: 20px;
+      display: inline-block;
+      vertical-align: middle; }
+    #footer-container #footer a {
+      color: #FFF;
+      text-decoration: none; }
 
 /*# sourceMappingURL=index.css.map */
