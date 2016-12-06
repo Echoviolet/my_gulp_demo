@@ -83,6 +83,11 @@
             changeChar();
         }
     });
+    $('#title-text').digital();
 })(jQuery);
 
-$('#title-text').digital();
+
+
+
+
+
