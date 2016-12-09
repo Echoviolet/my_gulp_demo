@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+</head>
+<body>
+<!--<div id="list">-->
+    <!--<p id="java">Java</p>-->
+    <!--<p id="python">Python</p>-->
+    <!--<p id="scheme">Scheme</p>-->
+<!--</div>-->
+<!--<form id = "test-form" method="post" onsubmit="return checkForm()">-->
+    <!--<input type="text" id="username" name="test">-->
+    <!--<input type="password" id="password" name="password">-->
+    <!--<button type="submit">Submit</button>-->
+<!--</form>-->
+<!--<form id="login-form" method="post" onsubmit="return checkForm()">-->
+    <!--<input type="text" id="username" name="username">-->
+    <!--<input type="password" id="input-password">-->
+    <!--<input type="hidden" id="md5-password" name="password">-->
+    <!--<button type="submit">Submit</button>-->
+<!--</form>-->
+<!--<input type="date" value="2016-12-08">-->
+<!--<input type="datetime-local" value="2015-07-01T02:03:04">-->
+<!--<input type="color" value="#ff0000">-->
+
+<!--<script>-->
+    <!--function checkForm() {-->
+        <!--var input_pwd = document.getElementById('input-password');-->
+        <!--var md5_pwd = document.getElementById('md5-password');-->
+        <!--// 把用户输入的明文变为MD5:-->
+        <!--//md5_pwd.value = toMD5(input_pwd.value);-->
+        <!--// 继续下一步:-->
+        <!--return true;-->
+    <!--}-->
+<!--</script>-->
+
+<!--<script>-->
+    <!--var js = document.createElement('p');-->
+    <!--var list = document.getElementById('list');-->
+    <!--js.id = 'javascript';-->
+    <!--js.innerText = 'JavaScript';-->
+    <!--list.appendChild(js);-->
+
+    <!--var d = document.createElement('style');-->
+    <!--d.setAttribute('type','text/css');-->
+    <!--d.innerHTML = 'p{color:red}';-->
+    <!--document.getElementsByTagName('head')[0].appendChild(d);-->
+
+    <!--var-->
+        <!--list = document.getElementById('list'),-->
+        <!--ref = document.getElementById('python'),-->
+        <!--haskell = document.createElement('p');-->
+    <!--haskell.id = 'haskell';-->
+    <!--haskell.innerText = 'Haskell';-->
+    <!--list.insertBefore(haskell, ref);-->
+    <!--var parent = document.getElementById('list');-->
+    <!--parent.removeChild(parent.children[0]);-->
+    <!--parent.removeChild(parent.children[1]);-->
+    <!--parent.removeChild(parent.children[0]);-->
+    <!--function checkForm() {-->
+        <!--var pwd = document.getElementById('password');-->
+        <!--pwd.value = toMD5(pwd.value);-->
+        <!--return true;-->
+    <!--}-->
+<!--</script>-->
+
+
+
+<!--<div id="test-promise-log" style="border: solid 1px #ccc; padding: 1em; margin: 15px 0;">-->
+    <!--<p id="p">Log:</p>-->
+<!--</div>-->
+
+<!--<script>-->
+    <!--'use strict';-->
+
+    <!--//清除logo：-->
+    <!--var logging = document.getElementById('test-promise-log');-->
+    <!--while(logging.children.length > 1){-->
+        <!--logging.removeChild(logging.children[logging.children.length - 1]);-->
+    <!--}-->
+
+    <!--//输出到log页面：-->
+    <!--function log(s) {-->
+        <!--var p = document.getElementById('p');-->
+        <!--p.innerHTML = s ;-->
+        <!--logging.appendChild(p);-->
+    <!--}-->
+
+    <!--new Promise(function (resolve,reject) {-->
+        <!--log('start new Promise...');-->
+        <!--var timeOut = Math.random()*2;-->
+        <!--log('set timeout to:' + timeOut + 'seconds.');-->
+        <!--setTimeout(function () {-->
+            <!--if(timeOut < 1){-->
+                <!--log('call reject()...');-->
+                <!--resolve('200 OK');-->
+            <!--}-->
+            <!--else{-->
+                <!--log('call reject()...');-->
+                <!--reject('timeout in' + timeOut + 'seconds.');-->
+            <!--}-->
+        <!--},timeOut*1000);-->
+    <!--}).then(function (r) {-->
+        <!--log('Done:' + r);-->
+    <!--}).catch(function (reason) {-->
+        <!--log('Failed:' + reason);-->
+    <!--});-->
+<!--</script>-->
+
+<!--
+Promise还可以做更多的事情，比如，有若干个异步任务，需要先做任务1，如果成功后再做任务2，任何任务的失败则不继续并执行错误处理函数。
+要串行执行这样的异步任务，不用Promise需要写一层一层的嵌套代码。有了Promise,我们只需要简单地写：
+
+job1.then(job2).then(job3).catch(handleError);
+其中，job1、job2和job3都是Promise对象。
+
+下面的例子演示了如何串行执行一系列需要异步计算获取结果的任务：
+-->
+
+<!--<div id="test-promise2-log" style="border: solid 1px #ccc; padding: 1em; margin: 15px 0;">-->
+    <!--<p id="p">Log:</p>-->
+<!--</div>-->
+
+<!--<script>-->
+    <!--'use strict';-->
+
+    <!--var logging = document.getElementById('test-promise2-log');-->
+    <!--while(logging.children.length > 1) {-->
+        <!--logging.removeChild(logging.children[logging.length - 1]);-->
+    <!--}-->
+
+    <!--function log(s) {-->
+        <!--var p = document.createElement('p');-->
+        <!--p.innerHTML = s;-->
+        <!--logging.appendChild(p);-->
+    <!--}-->
+
+    <!--//0.5秒后返回 input*input 的计算结果：-->
+    <!--function multiply(input) {-->
+        <!--return new Promise(function (resolve,reject) {-->
+            <!--log('calculating' + input + 'x' + input + '...');-->
+            <!--setTimeout(resolve,500,input*input);-->
+        <!--});-->
+    <!--}-->
+
+    <!--//0.5秒后返回 input+input的计算结果-->
+    <!--function add(input) {-->
+        <!--return new Promise(function (resolve,reject) {-->
+            <!--log('calculating' + input + '+' + input + '...');-->
+            <!--setTimeout(resolve,500,input+input);-->
+        <!--});-->
+    <!--}-->
+
+    <!--var p = new Promise(function (resolve,reject) {-->
+        <!--log('start new Promise...');-->
+        <!--resolve(123);-->
+    <!--});-->
+
+    <!--p.then(multiply)-->
+     <!--.then(add)-->
+     <!--.then(multiply)-->
+     <!--.then(add)-->
+     <!--.then(function (result) {-->
+         <!--log('Got value:' + result);-->
+     <!--});-->
+
+
+<!--</script>-->
+
+
+<!--
+setTimeout可以看成一个模拟网络等异步执行的函数。现在，我们先把上一节的AJAX异步执行函数转换为Promise对象，看看用Promise如何简化异步处理：
+-->
+
+<script>
+    'use strict';
+
+    //ajax函数将返回Promise对象：
+    function ajax(method,url,data) {
+        var request = new XMLHttpRequest();
+        return new Promise(function (resolve,reject) {
+            request.onreadystatechange = function () {
+                if (request.readyState === 4){
+                    if(request.status === 200){
+                        resolve(request.responseText);
+                    }else{
+                        reject(request.status);
+                    }
+                }
+            };
+            request.open(method,url);
+            request.send(data);
+        });
+    }
+    var log = document.getElementById('test-promise-ajax-result');
+    var p = ajax('GET','/api/categories');
+    p.then(function (text) {
+        log.innerText = text;
+    }).catch(function (status) {
+        log.innerText = 'Error:' + status;
+    })
+</script>
+
+<!--
+除了串行执行若干异步任务外，Promise还可以并行执行异步任务。
+试想一个聊天系统，我们需要从两个不同的URL分别获得用户的个人信息和好友列表，这两个任务是可以并行执行的，用Promise.all()实现如下：
+-->
+<script>
+    var p1 = new Promise(function (resolve,reject) {
+        setTimeout(resolve,500,'p1');
+    });
+    var p2 = new Promise(function (resolve,reject) {
+        setTimeout(resolve,600,'p2');
+    });
+    Promise.all([p1,p2]).then(function (results) {
+        console.log(results); //获得一个Array:['p1','p2']
+    });
+
+</script>
+
+<!--
+有些时候，多个异步是为了容错，比如，同时向两个URL读取用户个人信息，只需要获得先返回的结果即可。这种情况下，用Promise.race()实现：
+-->
+
+<script>
+    var p1 = new Promise(function(resolve,reject){
+        setTimeout(resolve,500,'p1');
+    });
+
+    var  p2 = new Promise(function(resolve,reject){
+        setTimeout(resolve,600,'p2');
+    });
+
+    Promise.race([p1,p2]).then(function (result) {
+        console.log(result);  //'p1'
+    });
+</script>
+
+<!--
+由于p1执行较快，Promise的then()将获得结果'p1',p2仍在继续执行，但执行结果将被丢弃。
+如果我们组合使用Promise，就可以把很多异步任务以并行和串行的方式组合起来执行。
+
+-->
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Canvas</title>
+</head>
+<body>
+<canvas id="test-shape-canvas" width="300" height="200" >
+    <p>Current Price: $25.76</p>
+</canvas>
+
+<script>
+
+//    getContext('2d')方法让我们拿到一个CanvasRenderingContext2D对象，所有的绘图操作都需要通过这个对象完成。
+//    var ctx = canvas.getContext('2d');
+//    如果需要绘制3D怎么办？HTML5还有一个WebGL规范，允许在Canvas中绘制3D图形：
+//    g1 = canvas.getContext("webg1");
+
+    'use strict';
+    var
+        canvas = document.getElementById('test-shape-canvas'),
+        ctx = canvas.getContext('2d');
+
+    ctx.clearRect(0,0,200,200); //擦除（0,0）位置大小为200X200的矩形，擦除的意思是把该区域变为透明
+    ctx.fillStyle = '#dddddd'; //设置颜色
+    ctx.fillRect(10,10,130,130); //把（10,10）位置大小为130X130的矩形涂色
+
+    //利用path绘制复杂路径
+    var path = new Path2D();
+    path.arc(75,75,50,0,Math.PI*2,true);
+    path.moveTo(110,75);
+    path.arc(75,75,35,0,Math.PI,false);
+    path.moveTo(65,65);
+    path.arc(60,65,5,0,Math.PI*2,true);
+    path.moveTo(95,65);
+    path.arc(90,65,5,0,Math.PI*2,true);
+    ctx.strokeStyle = '#0000ff';
+    ctx.stroke(path);
+
+</script>
+</body>
+</html>
