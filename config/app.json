@@ -2,7 +2,7 @@
   "app_name":"console",
   "local":"zh",
   "version":"develop",
-  "port":4000,
+  "port":7000,
   "relativePath":"",
   "mrelativePath":".."
 }

@@ -6,8 +6,8 @@ var autoprefixer = require('gulp-autoprefixer')
 var sass = require('gulp-sass')
 var browserSync = require('browser-sync').create()
 var supervisor = require("gulp-supervisor");
-var config = require('./../../config/app.json')
-var app = require('./../../app')
+var config = require('../../config/app.json')
+var app = require('../../app')
 console.log(config.port);
 
 /*-------------------------------------------------------------------

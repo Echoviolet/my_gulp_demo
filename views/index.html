@@ -1,44 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>I Know People</title>
-    <meta name="description" content="Intelligence comes from knowing more about people. We help you do that.">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../src/stylesheets/header.css">
-    <link rel="stylesheet" href="../src/stylesheets/index.css">
-    <link rel="shortcut icon" href="../src/images/favicon.ico">
-    <script src="../src/javascript/jquery-3.1.1.js"></script>
-    <script src="../src/javascript/index.js"></script>
-    <script src="../src/javascript/digital.js"></script>
-</head>
-<body>
-    <section class="nav">
-        <div class="main">
-            <div class="nav_left">
-                <ul>
-                    <li>
-                        <a href="">OUR FOCUS</a>
-                    </li>
-                    <li>
-                        <a href="">OUR OFFER</a>
-                    </li>
-                    <li>
-                        <a href="">OUR STORY</a>
-                    </li>
-                    <li>
-                        <a href="">OUR CHIEFS</a>
-                    </li>
-                    <li>
-                        <a href="">CONTACT US</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav_right">
-                <a href=""><img src="../src/images/top-header-logo.png"> </a>
-            </div>
-        </div>
-    </section>
+
+<% include common/header.html %>
     <div id="title-container" class="container">
         <section id="title">
             <h1 id="title-text">
@@ -56,7 +17,7 @@
             </h1>
             <div id="title-arrow">
                 <a class="no-offset not-mobile" href="#intro">
-                    <img src="../src/images/title-arrow.png" alt="Down arrow">
+                    <img src="/images/title-arrow.png" alt="Down arrow">
                 </a>
             </div>
         </section>
@@ -99,18 +60,6 @@
             </div>
         </section>
     </div>
-    <div id="footer-container" class="container">
-        <footer id="footer">
-            <div id="footer-text" class="block">
-                <span>©2014 Brand Village</span> ·
-                <span><a href="#">Terms</a></span> ·
-                <span><a href="#">Privacy Policy</a></span>
-            </div>
-            <div id="footer-logo" class="block">
-                <a href="#"><img style="width:auto; height: 31px;" src="../src/images/footer-logo.png" alt="Brand Village"></a>
-            </div>
-        </footer>
-    </div>
-    <!--<div class="test" style="padding-top:100px;width: 100%;height: 300px; text-align: center;font-size: 40px;color: green;">k</div>-->
+<% include common/footer.html %>
 </body>
 </html>
