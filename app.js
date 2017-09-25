@@ -16,23 +16,24 @@ var isDev;
 environmentDb = environmentDb ? environmentDb:"dev";
 isDev = /dev/i.test(environmentDb);
 app.engine('.html',require('ejs').__express);
-if(isDev){
+/*if(isDev){
     app.set('views',path.join(__dirname + '/views'));
 }else {
     app.set('views',path.join(__dirname + '/public'));
-}
+}*/
+app.set('views',path.join(__dirname + '/dist'));
 app.set('view engine','html');
 
 app.use(bodyParser.json());
-if(isDev){
+/*if(isDev){
     app.use(express.static(__dirname + '/src'));
 }else{
     app.use(express.static(__dirname + '/public'));
-}
-
+}*/
+app.use(express.static(__dirname + '/dist'));
 routes(app);
 
-var port = config['port'] || 7000;
+var port = config['port'] || 7001;
 if(!module.parent){
     app.listen(port);
     console.log('Express started on port ' + port);

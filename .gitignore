@@ -2,3 +2,5 @@
 node_modules/
 src/.sass-cache
 npm-debug.log
+dist/
+bin/
